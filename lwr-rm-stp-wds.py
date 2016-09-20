@@ -24,8 +24,10 @@ def format_stopwords():
 def process(line, stop_words_np):
     """For each line of input, print each line in all lower case letters."""
     w = line.lower().strip()
+    if len(w) == 1:
+        pass
     
-    if not w in stop_words_np:
+    elif not w in stop_words_np:
         print(w)
 
 for line in fileinput.input():
