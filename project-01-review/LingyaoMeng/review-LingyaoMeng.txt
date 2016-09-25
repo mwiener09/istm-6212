@@ -1,0 +1,16 @@
+Hi Lingyao!
+
+Great job with project 1! I had no issue stepping through your program in datanotebook.org and our answers matched for the majority of questions.
+
+For question 1, we approached this problem in slightly different ways, both of which obtained the same result. I like your way, it seems more efficient and intuitive. I learned about the -o option in grep from your answer.
+
+For questions 2 & 3 , we used the same process and obtained the same result.  After reviewing your python files, I thought that our code was succinct and effective.  You removed the punctuation in the same way that I did, using the re package.
+
+For the extra credit, we used the same approach.  Counts are pretty close for both of our approaches (~1 off).
+
+My only other minor/organization-type feedback would be maybe to include a bit more commenting and markdown text boxes to narrate your process a bit more clearly.  Also, I would keep your commenting consistent using either all markdown boxes  or all within the code.  
+
+Great work!
+
+Thanks,
+Marissa
