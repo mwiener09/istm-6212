@@ -1,0 +1,14 @@
+Overall
+- Your code ran fine for me in datanotebook.org.
+- It would have been nice to see some more explanation surrounding your code. It makes it a bit confusing to follow your thinking.
+Creating Database/Loading Data
+- Steps to format and upload data looked good to me!
+- Would have been nice if you specified that that you were connecting to the database using datanotebook.org. Just because if users are using their local machines, they will have to use a different process to connect.
+- I like the pie chart visualization that you used rather than the usual bar charts.
+- You encoded the nulls in the exact same way we did before creating your star schema, so that looks good.
+Star Schema
+- Interesting that you kept the INCIDENT_TYPE_DESCRIPTION, MAIN_CRIMECODE, and NatureCode on the fact table rather than separating it out into its own dimension table. In our project we separated that one into its own table, since it is more of a lookup rather than an additive fact.
+- Your approach was pretty much identical to our approach in creating the fact and dimension tables, however, your dimension tables have duplicate values since you did not use a select distinct in creating them. I believe you should be using select distinct rather than select to create these lookup tables.
+Data Investigation
+- Interesting look at the data in the last portion of the assignment! I wouldn’t have expected that many more crimes committed with a firearm than crimes using a Knife/Knife/Cutting Instrument. Also, it was useful for you to find the incomplete data for location. Maybe this should have been addressed earlier when encoding null values.
+- Good job overall!

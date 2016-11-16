@@ -1,0 +1,19 @@
+Hi Rithvik!
+
+I enjoyed reading through your project. It was nice that you chose a dataset which was unrelated to crime! Our project was on crime in Louisiana, so I actually recognized some of the street names from our analysis. Everything ran through datanotebook.org with following the directions within the text. My feedback is below.
+
+Initial Exploration
+o	First two parts were executed in a similar way to our project, no issues and clear directions to denote that the connection to the database would only work with datanotebook.org.
+o	Interesting that you used “money” as a format! I have never seen that before and am wondering what difference that makes.
+o	I like that you used Boolean instead of integer for the restoration_tax_abatement and homestead_exemption variables.
+o	I liked the clear explanation as to why you were deleting columns.
+o	One suggestion would be to change the year extraction to a character instead of a number, so that it wouldn’t be displayed with a decimal (ex. 2015.0)
+o	Interesting look of the housing market using property transfer. It is clearly cyclical and looks like we may be seeing a decline soon based on the pattern of previous years.
+Star Schema
+o	I think the values in your fact table make sense and that your dimensions are clearly defined and completely representative of the dataset.
+o	From your project I learned what 'CASCADE' meant! I didn’t know what it meant and had to look it up.
+o	For the taxpayer data, I really liked the way you used the nested functions to obtain the output. A very minor suggestion, but if you structured it in a more organized way, it may be easier to follow from an outsider’s perspective.
+Analysis
+o	One other suggestion is just to cast as integers for your output tables so that it looks a little less busy with the floating decimal points.
+o	I liked the focus of the analysis and takeaways.
+o	Month seasonality makes sense with the nature of the fiscal year.
