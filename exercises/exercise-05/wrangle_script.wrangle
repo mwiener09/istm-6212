@@ -1,0 +1,30 @@
+splitrows col: column1 on: '\r\n'
+split col: column1 on: ',' limit: 30 quote: '\"'
+header
+set col: No_Exercise value: null() row: ((-1150) <= No_Exercise) && (No_Exercise < (-1100))
+set col: CI_Min_No_Exercise value: null() row: ((-1150) <= CI_Min_No_Exercise) && (CI_Min_No_Exercise < (-1100))
+set col: CI_Max_No_Exercise value: null() row: ((-1150) <= CI_Max_No_Exercise) && (CI_Max_No_Exercise < (-1100))
+set col: Few_Fruit_Veg value: null() row: ((-1150) <= Few_Fruit_Veg) && (Few_Fruit_Veg < (-1100))
+set col: CI_Min_Fruit_Veg value: null() row: ((-1150) <= CI_Min_Fruit_Veg) && (CI_Min_Fruit_Veg < (-1100))
+set col: CI_Max_Fruit_Veg value: null() row: ((-1150) <= CI_Max_Fruit_Veg) && (CI_Max_Fruit_Veg < (-1100))
+set col: Obesity value: null() row: ((-1150) <= Obesity) && (Obesity < (-1100))
+set col: CI_Min_Obesity value: null() row: ((-1150) <= CI_Min_Obesity) && (CI_Min_Obesity < (-1100))
+set col: CI_Max_Obesity value: null() row: ((-1150) <= CI_Max_Obesity) && (CI_Max_Obesity < (-1100))
+set col: High_Blood_Pres value: null() row: ((-1150) <= High_Blood_Pres) && (High_Blood_Pres < (-1100))
+set col: CI_Min_High_Blood_Pres value: null() row: ((-1120) <= CI_Min_High_Blood_Pres) && (CI_Min_High_Blood_Pres < (-1100))
+set col: CI_Max_High_Blood_Pres value: null() row: ((-1150) <= CI_Max_High_Blood_Pres) && (CI_Max_High_Blood_Pres < (-1100))
+set col: Smoker value: null() row: ((-1150) <= Smoker) && (Smoker < (-1100))
+set col: CI_Min_Smoker value: null() row: ((-1150) <= CI_Min_Smoker) && (CI_Min_Smoker < (-1100))
+set col: CI_Max_Smoker value: null() row: ((-1150) <= CI_Max_Smoker) && (CI_Max_Smoker < (-1100))
+set col: Diabetes value: null() row: ((-1150) <= Diabetes) && (Diabetes < (-1100))
+set col: CI_Min_Diabetes value: null() row: ((-1150) <= CI_Min_Diabetes) && (CI_Min_Diabetes < (-1100))
+set col: CI_Max_Diabetes value: null() row: ((-1150) <= CI_Max_Diabetes) && (CI_Max_Diabetes < (-1100))
+derive value: CI_Max_Obesity - CI_Min_Obesity as: 'CI_Length_Obesity'
+derive value: CI_Length_Obesity / mean(CI_Length_Obesity) as: 'Relative_CI_Length_Obesity'
+derive value: Obesity / mean(Obesity) as: 'Relative_Obesity'
+derive value: if(Relative_Obesity >= 1, 1, 0) as: 'Obesity_Indicator'
+derive value: Prim_Care_Phys_Rate / 1000 as: 'Prim_Care_Phys_PCT'
+set col: Elderly_Medicare value: null() row: 0 >= Elderly_Medicare
+set col: Uninsured value: null() row: Uninsured < 0
+set col: Disabled_Medicare value: null() row: Disabled_Medicare < 0
+derive value: Elderly_Medicare / Disabled_Medicare as: 'Elderly_Disabled_Medicare_Ratio'
